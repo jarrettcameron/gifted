@@ -9,3 +9,16 @@
 .profile-picture.profile-picture-sm {
   height: 64px;
 }
+
+.card-img-top {
+  max-height: 200px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+.result-img {
+  cursor: pointer;
+  max-height: 100px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
