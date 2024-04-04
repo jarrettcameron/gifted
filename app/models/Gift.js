@@ -5,7 +5,6 @@ export class Gift {
         this.url = data.url
         this.opened = data.opened
         this.creatorId = data.creatorId
-        this.profileIdsOpened = data.profileIdsOpened
     }
 
     get template() {

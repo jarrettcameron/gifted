@@ -40,7 +40,8 @@ export class GiftController {
         } catch (error) {
             Pop.error('Could not create gift!')
         }
+
         // @ts-ignore
-        event.target.reset()
+        document.querySelector('#form-for-reset').reset()
     }
 }

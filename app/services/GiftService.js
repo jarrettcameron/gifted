@@ -9,7 +9,7 @@ class GiftService {
 
     async createGift(formData) {
         const response = await api.post('api/gifts', formData)
-        AppState.gifts.push(new Gift(response.data))
+        AppState.gifts.unshift(new Gift(response.data))
     }
 
     async getGifts() {
@@ -22,7 +22,6 @@ class GiftService {
         if (gift.opened) return
         gift.opened = true
         const response = await api.put(`api/gifts/${id}`, gift)
-        gift.profileIdsOpened = response.data.profileIdsOpened
         gift.url = response.data.url
         AppState.emit('gifts')
     }
