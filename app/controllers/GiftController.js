@@ -33,8 +33,6 @@ export class GiftController {
     }
 
     async createGift() {
-        // @ts-ignore
-        event.target.reset()
         event.preventDefault()
         try {
             const formData = getFormData(event.target)
@@ -42,5 +40,7 @@ export class GiftController {
         } catch (error) {
             Pop.error('Could not create gift!')
         }
+        // @ts-ignore
+        event.target.reset()
     }
 }
