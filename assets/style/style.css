@@ -11,6 +11,7 @@
 }
 
 .card-img-top {
+  cursor: pointer;
   max-height: 200px;
   aspect-ratio: 1/1;
   object-fit: cover;
